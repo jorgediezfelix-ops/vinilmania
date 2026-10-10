@@ -1,0 +1,14 @@
+.DS_Store
+._*
+__pycache__/
+*.pyc
+.env
+.env.*
+
+# Herramientas, documentación y originales conservados localmente.
+Abrir Vinilmania.command
+server.py
+LEEME.md
+IMAGENES-*.md
+FOTOS-DEL-SITIO-ORIGINAL.md
+imagenes-originales/
