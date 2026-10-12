@@ -242,70 +242,70 @@ const projects = [
     "note": "Fotografía recuperada del sitio original de Vinilmanía."
   },
   {
-    "image": "personalizados.webp",
+    "image": "personalizados-verdant.jpeg",
     "title": "Una misma idea, muchas formas.",
-    "alt": "Concepto de una colección de artículos personalizados",
+    "alt": "Colección conceptual de taza, termo, bolsa y playera con la marca Verdant",
     "category": "inspiracion",
-    "label": "CONCEPTO · PERSONALIZACIÓN",
-    "width": 1448,
-    "height": 1086,
+    "label": "PERSONALIZACIÓN",
+    "width": 792,
+    "height": 637,
     "origin": "concept",
-    "note": "Imagen conceptual · Inspiración para tu proyecto."
+    "note": ""
   },
   {
-    "image": "stickers.webp",
+    "image": "stickers-promocionales.png",
     "title": "Personalidad en pequeño formato.",
-    "alt": "Concepto de stickers con gráficos geométricos",
+    "alt": "Stickers promocionales verdes, naranjas, negros y lilas sobre una mesa beige",
     "category": "inspiracion",
-    "label": "CONCEPTO · STICKERS",
+    "label": "STICKERS",
     "width": 1448,
     "height": 1086,
     "origin": "concept",
-    "note": "Imagen conceptual · Inspiración para tu proyecto."
+    "note": ""
   },
   {
-    "image": "cristal-comercial.webp",
+    "image": "escaparate-willow.png",
     "title": "Tu espacio, con otra presencia.",
-    "alt": "Concepto de vinil microperforado sobre un escaparate",
+    "alt": "Escaparate Willow con vinil microperforado verde, naranja y beige",
     "category": "inspiracion",
-    "label": "CONCEPTO · GRÁFICA EN CRISTAL",
-    "width": 1448,
-    "height": 1086,
+    "label": "GRÁFICA EN CRISTAL",
+    "width": 1357,
+    "height": 1159,
     "origin": "concept",
-    "note": "Imagen conceptual · Inspiración para tu proyecto."
+    "note": ""
   },
   {
-    "image": "vinil-textil.webp",
+    "image": "vinil-textil-atelier-noir.png",
     "title": "Del gráfico a la prenda.",
-    "alt": "Concepto de playera personalizada en una prensa térmica",
+    "alt": "Playera negra Atelier Noir bajo una prensa térmica, junto a rollos de vinil",
     "category": "inspiracion",
-    "label": "CONCEPTO · PERSONALIZACIÓN TEXTIL",
+    "label": "PERSONALIZACIÓN TEXTIL",
     "width": 1448,
     "height": 1086,
     "origin": "concept",
-    "note": "Imagen conceptual · Inspiración para tu proyecto."
+    "note": ""
   },
   {
-    "image": "regalos-personalizados.webp",
+    "image": "regalos-aura-casa.png",
     "title": "Detalles que van contigo.",
-    "alt": "Concepto de tazas, termo y caja de regalo coordinados",
+    "alt": "Tazas, termo y caja de regalo Aura Casa con diseños botánicos verdes y naranjas",
     "category": "inspiracion",
-    "label": "CONCEPTO · REGALOS PERSONALIZADOS",
-    "width": 1448,
-    "height": 1086,
+    "label": "REGALOS PERSONALIZADOS",
+    "width": 1374,
+    "height": 1145,
     "origin": "concept",
-    "note": "Imagen conceptual · Inspiración para tu proyecto."
+    "note": ""
   },
   {
-    "image": "mesa-diseno.webp",
+    "image": "mesa-diseno-natura.png",
     "title": "Aquí comienza una nueva idea.",
-    "alt": "Concepto de mesa de diseño con muestras y materiales",
+    "alt": "Mesa de diseño Natura & Co. con computadora, viniles y papelería personalizada",
     "category": "inspiracion",
-    "label": "CONCEPTO · DISEÑO CREATIVO",
-    "width": 1448,
-    "height": 1086,
+    "label": "DISEÑO CREATIVO",
+    "width": 1305,
+    "height": 1206,
     "origin": "concept",
-    "note": "Imagen conceptual · Inspiración para tu proyecto."
+    "note": ""
   }
 ];
 const gallery = $('.gallery-grid');
@@ -331,7 +331,7 @@ if (gallery && dialog) {
           card.classList.add('visible');
         }
       });
-      const captions = {all: '14 fotografías del sitio original y 6 conceptos visuales', negocios: 'Gráfica para negocios', textiles: 'Personalización textil', personalizados: 'Productos personalizados', inspiracion: 'Conceptos visuales'};
+      const captions = {all: 'Galería Vinilmanía', negocios: 'Gráfica para negocios', textiles: 'Personalización textil', personalizados: 'Productos personalizados', inspiracion: 'Inspiración para tu proyecto'};
       $('#gallery-info').textContent = `${visibleProjects.length} ${visibleProjects.length === 1 ? 'imagen' : 'imágenes'} · ${captions[filter] || 'Galería Vinilmanía'}`;
     });
   });
@@ -341,7 +341,9 @@ if (gallery && dialog) {
     $('#lightbox-image').src = 'assets/' + project.image;
     $('#lightbox-image').alt = project.alt;
     $('#lightbox-title').textContent = project.title;
-    $('#lightbox-note').textContent = project.note;
+    const note = $('#lightbox-note');
+    note.textContent = project.note;
+    note.hidden = !project.note;
     $('#lightbox-count').textContent = `${visibleProjects.indexOf(index) + 1} / ${visibleProjects.length}`;
   }
   function moveProject(direction) {

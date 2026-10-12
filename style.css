@@ -73,3 +73,30 @@
   .next-actions { max-width: 100%; }
   .next-image-note { right: 20px; bottom: 11px; }
 }
+
+/* Opiniones de clientes */
+.customer-reviews { background: var(--paper); border-bottom: 1px solid var(--line); }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.review-card { min-width: 0; min-height: 286px; display: flex; flex-direction: column; padding: 28px; background: var(--cream); border: 1px solid var(--line); border-radius: 8px; }
+.review-stars { color: var(--orange); font-size: 18px; letter-spacing: 3px; line-height: 1; }
+.review-star-empty { color: #969f97; }
+.review-text { font-size: 14px; line-height: 1.75; color: var(--ink); margin-top: 21px; margin-bottom: 25px; }
+.review-author { display: flex; align-items: center; gap: 13px; margin-top: auto; padding-top: 20px; border-top: 1px solid #dde2d8; }
+.review-avatar { width: 43px; height: 43px; flex-shrink: 0; display: grid; place-items: center; border: 1px solid #dce1d6; border-radius: 50%; background: var(--paper); color: var(--ink); font-size: 12px; font-weight: 600; letter-spacing: .5px; }
+.review-author h3 { font: 600 13px/1.4 var(--body); }
+.review-role { display: block; margin-top: 4px; font-size: 10px; color: var(--muted); line-height: 1.5; }
+.review-source { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; margin-top: 27px; }
+.review-source p { font-size: 10px; color: var(--muted); line-height: 1.7; }
+.review-source .text-link { font-size: 11px; }
+.review-source .icon { width: 16px; height: 16px; }
+@media (max-width: 900px) {
+  .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .review-card { padding: 25px; }
+}
+@media (max-width: 600px) {
+  .review-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .review-card { min-height: 0; padding: 25px; }
+  .review-text { font-size: 13px; margin-bottom: 23px; }
+  .review-source { gap: 14px; margin-top: 24px; }
+  .customer-reviews .section-heading > p { margin-top: 22px; max-width: 320px; }
+}

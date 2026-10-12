@@ -25,6 +25,6 @@ GitHub Pages publica desde la raíz de la rama `main`. Guarda los cambios, crea 
 
 ## Contenido e imágenes
 
-La información del negocio y las fotografías de trabajos reales provienen de [vinilmania.net](https://vinilmania.net/). Las imágenes generadas que ilustran ideas se identifican como conceptuales en la web. Las fuentes Barlow y DM Sans incluyen sus licencias en `assets/`.
+La información del negocio, las fotografías de trabajos reales y las opiniones de clientes provienen de [vinilmania.net](https://vinilmania.net/). Las opiniones se muestran resumidas, con sus nombres y calificaciones originales. El sitio también incluye las imágenes proporcionadas para ilustrar servicios y productos. Las fuentes Barlow y DM Sans incluyen sus licencias en `assets/`.
 
 El formulario prepara un mensaje de WhatsApp para que la persona lo revise y envíe. No almacena datos ni envía mensajes automáticamente.
